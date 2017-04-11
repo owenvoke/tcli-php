@@ -1,0 +1,16 @@
+{
+  "name": "pxgamer/tcli-php",
+  "description": "A CLI torrent searching system.",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "require": {
+    "pxgamer/torrent-parser-php": "1.0.*",
+    "symfony/console": "3.2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "pxgamer\\Tcli\\": "src/"
+    }
+  }
+}
