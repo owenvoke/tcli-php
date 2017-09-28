@@ -9,7 +9,7 @@ require ROOT_PATH . 'vendor/autoload.php';
 use pxgamer\Tcli;
 use Symfony\Component\Console\Application;
 
-$Application = new Application(' Tcli', '1.0.0');
+$Application = new Application('Tcli', '1.0.0');
 
 Tcli\Console::register($Application);
 
