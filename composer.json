@@ -5,7 +5,7 @@
   "license": "MIT",
   "minimum-stability": "stable",
   "require": {
-    "pxgamer/torrent-parser-php": "1.0.*",
+    "pxgamer/torrent-parser-php": "^2.1.1",
     "symfony/console": "^3.3.9"
   },
   "autoload": {
