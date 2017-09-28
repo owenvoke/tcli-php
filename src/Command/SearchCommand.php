@@ -43,10 +43,6 @@ class SearchCommand extends Command
         $result = TP\WorldWideTorrents::search($query);
         $results = array_merge($results, (is_array($result) ? $result : []));
 
-        // Fetch torrents from ExtraTorrent
-        $result = TP\ExtraTorrent::search($query);
-        $results = array_merge($results, (is_array($result) ? $result : []));
-
         unset($result);
         // Output results to console
         foreach ($results as $result) {

@@ -40,10 +40,6 @@ class LatestCommand extends Command
         $result = TP\WorldWideTorrents::latest();
         $results = array_merge($results, (is_array($result) ? $result : []));
 
-        // Fetch torrents from ExtraTorrent
-        $result = TP\ExtraTorrent::latest();
-        $results = array_merge($results, (is_array($result) ? $result : []));
-
         unset($result);
         // Output results to console
         foreach ($results as $result) {
