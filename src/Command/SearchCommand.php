@@ -18,7 +18,7 @@ class SearchCommand extends Command
     {
         $this
             ->setName('search')
-            ->setDescription('Searches for torrents.')
+            ->setDescription('Searches for torrents from all available torrent sites.')
             ->setHelp('This command allows you to search for torrents across multiple torrent sites.')
             ->addArgument('query', InputArgument::REQUIRED, 'The query to search for.');
     }
@@ -41,10 +41,6 @@ class SearchCommand extends Command
 
         // Fetch torrents from WorldWideTorrents
         $result = TP\WorldWideTorrents::search($query);
-        $results = array_merge($results, (is_array($result) ? $result : []));
-
-        // Fetch torrents from ExtraTorrent
-        $result = TP\ExtraTorrent::search($query);
         $results = array_merge($results, (is_array($result) ? $result : []));
 
         unset($result);

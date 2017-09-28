@@ -17,7 +17,7 @@ class LatestCommand extends Command
     {
         $this
             ->setName('latest')
-            ->setDescription('Gets the latest torrents.')
+            ->setDescription('Gets the latest torrents from all available torrent sites.')
             ->setHelp('This command allows you to get the latest torrents across multiple torrent sites.');
     }
 
@@ -38,10 +38,6 @@ class LatestCommand extends Command
 
         // Fetch torrents from WorldWideTorrents
         $result = TP\WorldWideTorrents::latest();
-        $results = array_merge($results, (is_array($result) ? $result : []));
-
-        // Fetch torrents from ExtraTorrent
-        $result = TP\ExtraTorrent::latest();
         $results = array_merge($results, (is_array($result) ? $result : []));
 
         unset($result);
