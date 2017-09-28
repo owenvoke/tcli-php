@@ -18,12 +18,10 @@ class Console
     {
         // Register Latest Commands
         $Application->add(new Command\LatestCommand());
-        $Application->add(new Command\LatestETCommand());
         $Application->add(new Command\LatestWWTCommand());
 
         // Register Search Commands
         $Application->add(new Command\SearchCommand());
-        $Application->add(new Command\SearchETCommand());
         $Application->add(new Command\SearchWWTCommand());
     }
 }
