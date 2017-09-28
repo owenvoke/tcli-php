@@ -12,5 +12,8 @@
     "psr-4": {
       "pxgamer\\Tcli\\": "src/"
     }
-  }
+  },
+  "bin": [
+    "bin/tcli"
+  ]
 }
