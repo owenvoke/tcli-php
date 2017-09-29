@@ -1,6 +1,6 @@
 <?php
 
-namespace pxgamer\Tcli\Command;
+namespace pxgamer\Tcli\Command\WorldWideTorrents;
 
 use pxgamer\TorrentParser as TP;
 use Symfony\Component\Console\Command\Command;
@@ -8,10 +8,10 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Class LatestWWTCommand
- * @package pxgamer\Tcli\Command
+ * Class LatestCommand
+ * @package pxgamer\Tcli\Command\WorldWideTorrents
  */
-class LatestWWTCommand extends Command
+class LatestCommand extends Command
 {
     protected function configure()
     {
