@@ -36,25 +36,21 @@ class SearchCommand extends Command
             '',
         ]);
 
-        $results = [];
-
         // Fetch torrents from WorldWideTorrents
-        $result = TP\WorldWideTorrents::search($query);
-        $results = array_merge($results, (is_array($result) ? $result : []));
+        $results = TP\WorldWideTorrents::search($query);
 
-        unset($result);
-        // Output results to console
-        if (!empty($results)) {
+        if ($results->isEmpty()) {
+            /** @var TP\Torrent $result */
             foreach ($results as $result) {
                 $output->writeln([
-                    ' ' . $result['title'],
-                    ' ' . $result['info_hash'],
-                    ' ' . $result['link'],
+                    ' ' . $result->title,
+                    ' ' . $result->hash,
+                    ' ' . $result->link,
                     ''
                 ]);
             }
         } else {
-            $output->write('No torrents found.');
+            $output->write(' No torrents found.');
         }
     }
 }
