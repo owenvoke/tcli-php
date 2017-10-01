@@ -35,7 +35,7 @@ class LatestCommand extends Command
 
         $results = [];
 
-        // Fetch torrents from WorldWideTorrents
+        // Fetch torrents from RARBG
         $result = TP\RARBG::latest();
         $results = array_merge($results, (is_array($result) ? $result : []));
 
