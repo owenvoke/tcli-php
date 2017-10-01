@@ -2,17 +2,22 @@
 
 A CLI torrent searching system.
 
+## Installation
+
+To install globally, use:  
+`composer global require pxgamer/tcli-php`
+
 ## Commands
 
 #### Base Command
-`php bin/tcli` - This will list all commands available.
+`tcli` - This will list all commands available.
 
 #### Latest Torrents
-`php bin/tcli latest` - This will get the latest torrents from all available torrent sites.  
-`php bin/tcli latest:wwt` - This will get the latest torrents from WorldWideTorrents.  
-`php bin/tcli latest:rarbg` - This will get the latest torrents from RARBG.  
-`php bin/tcli latest:eztv` - This will get the latest torrents from EZTV.  
+`tcli latest` - This will get the latest torrents from all available torrent sites.  
+`tcli latest:wwt` - This will get the latest torrents from WorldWideTorrents.  
+`tcli latest:rarbg` - This will get the latest torrents from RARBG.  
+`tcli latest:eztv` - This will get the latest torrents from EZTV.  
 
 #### Searching Torrents
-`php bin/tcli search` - This will get the latest torrents from all available torrent sites.  
-`php bin/tcli search:wwt` - This will get the latest torrents from WorldWideTorrents.  
+`tcli search` - This will get the latest torrents from all available torrent sites.  
+`tcli search:wwt` - This will get the latest torrents from WorldWideTorrents.  
