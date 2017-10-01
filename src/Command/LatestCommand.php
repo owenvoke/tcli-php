@@ -39,6 +39,7 @@ class LatestCommand extends Command
         $results = $results->concat(TP\WorldWideTorrents::latest());
         $results = $results->concat(TP\RARBG::latest());
         $results = $results->concat(TP\EZTV::latest());
+        $results = $results->concat(TP\LimeTorrents::latest());
 
         /** @var Collection $results */
         if (!$results->isEmpty()) {
