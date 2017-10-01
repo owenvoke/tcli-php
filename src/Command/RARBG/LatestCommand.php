@@ -33,24 +33,20 @@ class LatestCommand extends Command
             '',
         ]);
 
-        $results = [];
-
         // Fetch torrents from RARBG
-        $result = TP\RARBG::latest();
-        $results = array_merge($results, (is_array($result) ? $result : []));
+        $results = TP\RARBG::latest();
 
-        unset($result);
-        // Output results to console
-        foreach ($results as $result) {
-            $regex = '/magnet:\?xt=urn:btih:([a-z0-9]{40})&dn=/';
-            preg_match($regex, $result['link'], $matches);
-            $result['info_hash'] = $matches[1] ?? null;
-
-            $output->writeln([
-                ' ' . $result['title'],
-                ' ' . $result['info_hash'],
-                ''
-            ]);
+        if (!$results->isEmpty()) {
+            /** @var TP\Torrent $result */
+            foreach ($results as $result) {
+                $output->writeln([
+                    ' ' . $result->title,
+                    ' ' . $result->link,
+                    ''
+                ]);
+            }
+        } else {
+            $output->write(' No torrents found.');
         }
     }
 }
