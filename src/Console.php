@@ -19,6 +19,7 @@ class Console
         $Application->add(new Command\LatestCommand());
         $Application->add(new Command\WorldWideTorrents\LatestCommand());
         $Application->add(new Command\RARBG\LatestCommand());
+        $Application->add(new Command\EZTV\LatestCommand());
 
         // Register Search Commands
         $Application->add(new Command\SearchCommand());

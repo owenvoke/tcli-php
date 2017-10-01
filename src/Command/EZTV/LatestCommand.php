@@ -1,6 +1,6 @@
 <?php
 
-namespace pxgamer\Tcli\Command\RARBG;
+namespace pxgamer\Tcli\Command\EZTV;
 
 use pxgamer\TorrentParser as TP;
 use Symfony\Component\Console\Command\Command;
@@ -15,9 +15,9 @@ class LatestCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('latest:rarbg')
-            ->setDescription('Gets the latest torrents on RARBG.')
-            ->setHelp('This command allows you to get the latest torrents from RARBG.');
+            ->setName('latest:eztv')
+            ->setDescription('Gets the latest torrents on EZTV.')
+            ->setHelp('This command allows you to get the latest torrents from EZTV.');
     }
 
     /**
@@ -28,13 +28,13 @@ class LatestCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln([
-            ' Latest Torrents from RARBG',
+            ' Latest Torrents from EZTV',
             ' ==================================',
             '',
         ]);
 
-        // Fetch torrents from RARBG
-        $results = TP\RARBG::latest();
+        // Fetch torrents from EZTV
+        $results = TP\EZTV::latest();
 
         if (!$results->isEmpty()) {
             /** @var TP\Torrent $result */

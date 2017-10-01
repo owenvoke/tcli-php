@@ -2,6 +2,7 @@
 
 namespace pxgamer\Tcli\Command;
 
+use Illuminate\Support\Collection;
 use pxgamer\TorrentParser as TP;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -36,21 +37,22 @@ class SearchCommand extends Command
             '',
         ]);
 
-        $results = [];
+        // Fetch torrents from all sites
+        $results = new Collection();
+        $results = $results->concat(TP\WorldWideTorrents::search($query));
 
-        // Fetch torrents from WorldWideTorrents
-        $result = TP\WorldWideTorrents::search($query);
-        $results = array_merge($results, (is_array($result) ? $result : []));
-
-        unset($result);
-        // Output results to console
-        foreach ($results as $result) {
-            $output->writeln([
-                ' ' . $result['title'],
-                ' ' . $result['info_hash'],
-                ' ' . $result['link'],
-                ''
-            ]);
+        /** @var Collection $results */
+        if (!$results->isEmpty()) {
+            /** @var TP\Torrent $result */
+            foreach ($results as $result) {
+                $output->writeln([
+                    ' ' . $result->title,
+                    ' ' . $result->link,
+                    ''
+                ]);
+            }
+        } else {
+            $output->write(' No torrents found.');
         }
     }
 }
