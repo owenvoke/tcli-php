@@ -17,6 +17,7 @@ To install globally, use:
 `tcli latest:wwt` - This will get the latest torrents from WorldWideTorrents.  
 `tcli latest:rarbg` - This will get the latest torrents from RARBG.  
 `tcli latest:eztv` - This will get the latest torrents from EZTV.  
+`tcli latest:limetorrents` - This will get the latest torrents from LimeTorrents.  
 
 #### Searching Torrents
 `tcli search` - This will get the latest torrents from all available torrent sites.  

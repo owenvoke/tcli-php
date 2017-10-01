@@ -55,16 +55,16 @@
         },
         {
             "name": "pxgamer/torrent-parser-php",
-            "version": "v3.1.0",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pxgamer/torrent-parser-php.git",
-                "reference": "9ce9499e024290c77f5bcfb99b7fe9064429c12f"
+                "reference": "8904375eafdb9cbcf0005b849af7601d551a3811"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pxgamer/torrent-parser-php/zipball/9ce9499e024290c77f5bcfb99b7fe9064429c12f",
-                "reference": "9ce9499e024290c77f5bcfb99b7fe9064429c12f",
+                "url": "https://api.github.com/repos/pxgamer/torrent-parser-php/zipball/8904375eafdb9cbcf0005b849af7601d551a3811",
+                "reference": "8904375eafdb9cbcf0005b849af7601d551a3811",
                 "shasum": ""
             },
             "require": {
@@ -86,7 +86,7 @@
                 "MIT"
             ],
             "description": "A collection of parsers for various torrent RSS/JSON feeds.",
-            "time": "2017-10-01T09:44:02+00:00"
+            "time": "2017-10-01T15:46:06+00:00"
         },
         {
             "name": "symfony/console",
