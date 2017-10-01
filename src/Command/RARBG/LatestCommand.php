@@ -1,8 +1,7 @@
 <?php
 
-namespace pxgamer\Tcli\Command;
+namespace pxgamer\Tcli\Command\RARBG;
 
-use Illuminate\Support\Collection;
 use pxgamer\TorrentParser as TP;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
@@ -16,9 +15,9 @@ class LatestCommand extends Command
     protected function configure()
     {
         $this
-            ->setName('latest')
-            ->setDescription('Gets the latest torrents from all available torrent sites.')
-            ->setHelp('This command allows you to get the latest torrents across multiple torrent sites.');
+            ->setName('latest:rarbg')
+            ->setDescription('Gets the latest torrents on RARBG.')
+            ->setHelp('This command allows you to get the latest torrents from RARBG.');
     }
 
     /**
@@ -29,19 +28,14 @@ class LatestCommand extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $output->writeln([
-            ' Latest Torrents',
+            ' Latest Torrents from RARBG',
             ' ==================================',
             '',
         ]);
 
-        // Fetch torrents from all sites
-        $results = new Collection();
-        $results = $results->concat(TP\WorldWideTorrents::latest());
-        $results = $results->concat(TP\RARBG::latest());
-        $results = $results->concat(TP\EZTV::latest());
-        $results = $results->concat(TP\LimeTorrents::latest());
+        // Fetch torrents from RARBG
+        $results = TP\RARBG::latest();
 
-        /** @var Collection $results */
         if (!$results->isEmpty()) {
             /** @var TP\Torrent $result */
             foreach ($results as $result) {

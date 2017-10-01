@@ -7,7 +7,6 @@ use Symfony\Component\Console\Application;
 
 /**
  * Class Console
- * @package pxgamer\Tcli
  */
 class Console
 {
@@ -18,10 +17,13 @@ class Console
     {
         // Register Latest Commands
         $Application->add(new Command\LatestCommand());
-        $Application->add(new Command\LatestWWTCommand());
+        $Application->add(new Command\WorldWideTorrents\LatestCommand());
+        $Application->add(new Command\RARBG\LatestCommand());
+        $Application->add(new Command\EZTV\LatestCommand());
+        $Application->add(new Command\LimeTorrents\LatestCommand());
 
         // Register Search Commands
         $Application->add(new Command\SearchCommand());
-        $Application->add(new Command\SearchWWTCommand());
+        $Application->add(new Command\WorldWideTorrents\SearchCommand());
     }
 }
