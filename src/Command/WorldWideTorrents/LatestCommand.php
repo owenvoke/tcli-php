@@ -36,7 +36,7 @@ class LatestCommand extends Command
         // Fetch torrents from WorldWideTorrents
         $results = TP\WorldWideTorrents::latest();
 
-        if ($results->isEmpty()) {
+        if (!$results->isEmpty()) {
             /** @var TP\Torrent $result */
             foreach ($results as $result) {
                 $output->writeln([

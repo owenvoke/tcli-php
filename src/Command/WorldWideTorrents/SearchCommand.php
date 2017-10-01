@@ -39,7 +39,7 @@ class SearchCommand extends Command
         // Fetch torrents from WorldWideTorrents
         $results = TP\WorldWideTorrents::search($query);
 
-        if ($results->isEmpty()) {
+        if (!$results->isEmpty()) {
             /** @var TP\Torrent $result */
             foreach ($results as $result) {
                 $output->writeln([
