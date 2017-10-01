@@ -7,7 +7,6 @@ use Symfony\Component\Console\Application;
 
 /**
  * Class Console
- * @package pxgamer\Tcli
  */
 class Console
 {

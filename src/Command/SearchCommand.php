@@ -10,7 +10,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class SearchCommand
- * @package pxgamer\Tcli\Command
  */
 class SearchCommand extends Command
 {

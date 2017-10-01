@@ -9,7 +9,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class LatestCommand
- * @package pxgamer\Tcli\Command\RARBG
  */
 class LatestCommand extends Command
 {

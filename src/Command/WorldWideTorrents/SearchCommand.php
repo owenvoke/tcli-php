@@ -10,7 +10,6 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 /**
  * Class SearchCommand
- * @package pxgamer\Tcli\Command\WorldWideTorrents
  */
 class SearchCommand extends Command
 {
