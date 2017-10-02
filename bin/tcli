@@ -11,7 +11,7 @@ if (file_exists(__DIR__ . '/../../../autoload.php')) {
 use pxgamer\Tcli;
 use Symfony\Component\Console\Application;
 
-$Application = new Application('Tcli', '1.0.0');
+$Application = new Application('Tcli', '2.0.1');
 
 Tcli\Console::register($Application);
 
