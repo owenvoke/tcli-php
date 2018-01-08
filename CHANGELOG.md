@@ -4,6 +4,16 @@ All notable changes to `tcli-php` will be documented in this file.
 
 Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) principles.
 
+## v2.0.4 - 2018-01-08
+
+### Added
+- Added Box support
+
+## v2.0.3 - 2017-12-06
+
+### Fixed
+- Corrected legal name in license
+
 ## v2.0.2 - 2017-11-20
 
 ### Added
