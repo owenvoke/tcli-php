@@ -1,0 +1,18 @@
+{
+    "chmod": "0755",
+    "main": "bin/tcli",
+    "output": "bin/tcli.phar",
+    "directories": [
+        "src"
+    ],
+    "finder": [
+        {
+            "name": "*.php",
+            "exclude": [
+                "tests"
+            ],
+            "in": "vendor"
+        }
+    ],
+    "stub": true
+}
