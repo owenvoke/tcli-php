@@ -1,17 +1,11 @@
 #!/usr/bin/env php
 <?php
 
-use pxgamer\Tcli;
-use Symfony\Component\Console\Application;
-
-if (file_exists(__DIR__ . '/../../../autoload.php')) {
-    require __DIR__ . '/../../../autoload.php';
+if (file_exists(__DIR__.'/../../../autoload.php')) {
+    require __DIR__.'/../../../autoload.php';
 } else {
-    require __DIR__ . '/../vendor/autoload.php';
+    require __DIR__.'/../vendor/autoload.php';
 }
 
-$application = new Application('Tcli', '2.0.4');
-
-Tcli\Console::register($application);
-
-$application->run();
+$app = new pxgamer\Tcli\Application();
+$app->run();
