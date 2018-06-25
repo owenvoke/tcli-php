@@ -9,15 +9,6 @@
 
 A CLI torrent searching system.
 
-## Structure
-
-```
-bin/
-src/
-tests/
-vendor/
-```
-
 ## Install
 
 Via Composer
