@@ -2,7 +2,12 @@
 
 All notable changes to `tcli-php` will be documented in this file.
 
-Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com) principles.
+Updates should follow the [Keep a CHANGELOG](https://keepachangelog.com) principles.
+
+## v2.1.1 - 2018-06-25
+
+### Changed
+- Update to use a new versioning format for Phar files
 
 ## v2.1.0 - 2018-06-25
 

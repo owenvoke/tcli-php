@@ -14,5 +14,6 @@
             "in": "vendor"
         }
     ],
+    "git-tag": "git-version",
     "stub": true
 }
