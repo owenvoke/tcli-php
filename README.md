@@ -9,15 +9,6 @@
 
 A CLI torrent searching system.
 
-## Structure
-
-```
-bin/
-src/
-tests/
-vendor/
-```
-
 ## Install
 
 Via Composer
@@ -26,21 +17,34 @@ Via Composer
 $ composer global require pxgamer/tcli-php
 ```
 
+Via Phive
+
+``` bash
+$ phive install pxgamer/tcli-php
+```
+
 ## Usage
 
-#### Base Command
-`tcli` - This will list all commands available.
+```bash
+tcli {{command}}
+```
 
-#### Latest Torrents
-`tcli latest` - This will get the latest torrents from all available torrent sites.  
-`tcli latest:wwt` - This will get the latest torrents from WorldWideTorrents.  
-`tcli latest:rarbg` - This will get the latest torrents from RARBG.  
-`tcli latest:eztv` - This will get the latest torrents from EZTV.  
-`tcli latest:limetorrents` - This will get the latest torrents from LimeTorrents.  
+**Latest Torrents**
 
-#### Searching Torrents
-`tcli search` - This will get the latest torrents from all available torrent sites.  
-`tcli search:wwt` - This will get the latest torrents from WorldWideTorrents.  
+Command                    | Description
+-------------------------- | -----------
+`tcli latest`              | This will get the latest torrents from all available torrent sites.  
+`tcli latest:wwt`          | This will get the latest torrents from WorldWideTorrents.  
+`tcli latest:rarbg`        | This will get the latest torrents from RARBG.  
+`tcli latest:eztv`         | This will get the latest torrents from EZTV.  
+`tcli latest:limetorrents` | This will get the latest torrents from LimeTorrents.  
+
+**Searching Torrents**
+
+Command           | Description
+----------------- | -----------
+`tcli search`     | This will get the latest torrents from all available torrent sites.  
+`tcli search:wwt` | This will get the latest torrents from WorldWideTorrents.  
 
 ## Change log
 
