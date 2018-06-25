@@ -17,6 +17,12 @@ Via Composer
 $ composer global require pxgamer/tcli-php
 ```
 
+Via Phive
+
+``` bash
+$ phive install pxgamer/tcli-php
+```
+
 ## Usage
 
 ```bash
